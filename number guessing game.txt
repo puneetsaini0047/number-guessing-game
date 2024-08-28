@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int num=42;
+  int user;
+  int attempt =0;
+  cout<<"Hi ,i have choosen a random number between 1-100"<<endl;
+  cout<<"take a guess"<<endl;
+  
+  while(true){
+    cin>>user;
+    if(user<0){
+      cout<<"number is in between 1-100"<<endl;
+      attempt++;
+      
+    }
+    if(user>100){
+      cout<<"number is in between 1-100"<<endl;
+      attempt++;
+    }
+    if(user<num){
+      cout<<"too low , another guess"<<endl;
+      attempt++;
+    }
+    if(user>num){
+      cout<<"too high , another guess"<<endl;
+      attempt++;
+    }
+
+    if(user==num){
+      cout<<"correct guess"<<endl;
+      cout<<"you have gussed the number in "<<attempt<<" attempts"<<endl;
+      break;
+    }
+  }
+}
